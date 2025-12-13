@@ -79,13 +79,7 @@ const i18n = {
   }
 };
 
-
 let currentLang = localStorage.getItem('siteLang') || 'es';
-
-/* ===============================
-   TRADUCCIONES
-================================ */
-const i18n = { /* TU OBJETO i18n NO CAMBIA */ };
 
 function applyTranslations(){
   const dict = i18n[currentLang] || i18n.es;
@@ -115,28 +109,29 @@ const templates = {
 
 async function loadPage(url){
   try{
-    const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error("Error cargando " + url);
+    const key = url.startsWith('./') ? url : ('./' + url);
+    const res = await fetch(key, {cache:'no-store'});
+    if(!res.ok) throw new Error('fetch error');
     const html = await res.text();
     contentEl.innerHTML = html;
-  } catch (e) {
-    contentEl.innerHTML = "<div class='card'>Error cargando la página</div>";
-    console.error(e);
+  }catch(e){
+    const key = url.startsWith('./') ? url : ('./' + url);
+    if(templates[key]) contentEl.innerHTML = templates[key];
+    else contentEl.innerHTML = '<div class="card"><p>Error cargando la página.</p></div>';
   } finally {
     applyTranslations();
+    hambMenu.classList.remove('show');
+    hambtn.setAttribute('aria-expanded','false');
   }
 }
 
-/* ===============================
-   DELEGACIÓN DE EVENTOS (MENÚS)
-================================ */
+// delegated links so both sidebar and hamburger menu work
 document.addEventListener('click', (ev)=>{
-  const link = ev.target.closest('[data-load]');
-  if (!link) return;
+  const a = ev.target.closest('[data-load]');
+  if (!a) return;
 
   ev.preventDefault();
-  const url = link.dataset.load;   // ← USAR TAL CUAL
-  loadPage(url);
+  loadPage(a.dataset.load); // usar la ruta tal cual
 });
 
 // language buttons change site-wide language and persist selection
