@@ -109,19 +109,15 @@ const templates = {
 
 async function loadPage(url){
   try{
-    const key = url.startsWith('./') ? url : ('./' + url);
-    const res = await fetch(key, {cache:'no-store'});
-    if(!res.ok) throw new Error('fetch error');
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error("Error cargando " + url);
     const html = await res.text();
     contentEl.innerHTML = html;
-  }catch(e){
-    const key = url.startsWith('./') ? url : ('./' + url);
-    if(templates[key]) contentEl.innerHTML = templates[key];
-    else contentEl.innerHTML = '<div class="card"><p>Error cargando la página.</p></div>';
+  } catch (e) {
+    contentEl.innerHTML = "<div class='card'>Error cargando la página</div>";
+    console.error(e);
   } finally {
     applyTranslations();
-    hambMenu.classList.remove('show');
-    hambtn.setAttribute('aria-expanded','false');
   }
 }
 
