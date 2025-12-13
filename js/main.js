@@ -107,27 +107,10 @@ const templates = {
   'html/projects.html': document.getElementById('tpl-projects').innerHTML
 };
 
-async function loadPage(url){
-  try{
-    const key = url.startsWith('./') ? url : ('./' + url);
-    const res = await fetch(key, {cache:'no-store'});
-    if(!res.ok) throw new Error('fetch error');
-    const html = await res.text();
-    contentEl.innerHTML = html;
-  }catch(e){
-    const key = url.startsWith('./') ? url : ('./' + url);
-    if(templates[key]) contentEl.innerHTML = templates[key];
-    else contentEl.innerHTML = '<div class="card"><p>Error cargando la página.</p></div>';
-  } finally {
-    applyTranslations();
-    hambMenu.classList.remove('show');
-    hambtn.setAttribute('aria-expanded','false');
-  }
-}
+// Navegación SPA eliminada para uso clásico
 
 // delegated links so both sidebar and hamburger menu work
-document.addEventListener('click', (ev)=>{
-  const a = ev.target.closest('[data-load]');
+// Delegación SPA eliminada
   if (!a) return;
 
   ev.preventDefault();
