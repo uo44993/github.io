@@ -1,5 +1,41 @@
-<section class="block">
-  <h2 data-i18n="hobbies_title">Aficiones</h2>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Aficiones</title>
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="profile">
+    <img src="../profile.jpg">
+    <div><h1>Mi Web Personal</h1><p>Aficiones</p></div>
+  </div>
+  <div class="top-right">
+    <button id="hambtn" class="hambtn">☰</button>
+    <div id="hambMenu" class="hamb-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="../html/personal.html">Personal</a>
+      <a href="../html/hobbies.html">Aficiones</a>
+      <a href="../html/projects.html">Proyectos</a>
+    </div>
+    <div class="lang">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <nav class="sidebar">
+    <a href="../index.html">Inicio</a>
+    <a href="../html/personal.html">Personal</a>
+    <a href="../html/hobbies.html">Aficiones</a>
+    <a href="../html/projects.html">Proyectos</a>
+  </nav>
+  <section class="content">
+    <nav class="breadcrumb"><a href='../index.html'>Inicio</a> › Aficiones</nav>
+    <div class='card' data-lang='es'>Aficiones</div><div class='card' data-lang='en'>Hobbies</div>
   <div id="deportes" class="card">
     <h3 data-i18n="hobby_sports">Deportes</h3>
     <p data-i18n="hobby_sports_text">Fútbol
@@ -34,4 +70,15 @@
     <h3 data-i18n="hobby_other">Otros</h3>
     <p data-i18n="hobby_other_text">De vez en cuanto hacemos escapadas breves para recorrer alguna ruta de unas pocas etapas en bici, ruta del quijote, circular de Extremadura, 10.000 del soplao, ... una manera de hacer deporte, viajar, y sobre todo, compartir experiencias.</p>
   </div>
-</section>
+  </section>
+</div>
+<footer>
+  <span>HTML5 · CSS3</span>
+  <span>
+    <a href="https://facebook.com">Facebook</a> |
+    <a href="https://x.com">X</a> |
+    <a href="mailto:correo@ejemplo.com">Email</a>
+  </span>
+</footer>
+</body>
+</html>

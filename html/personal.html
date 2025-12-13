@@ -1,5 +1,41 @@
-<section class="block">
-  <h2 data-i18n="personal_title">Sobre mí</h2>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Personal</title>
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="profile">
+    <img src="../profile.jpg">
+    <div><h1>Mi Web Personal</h1><p>Personal</p></div>
+  </div>
+  <div class="top-right">
+    <button id="hambtn" class="hambtn">☰</button>
+    <div id="hambMenu" class="hamb-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="../html/personal.html">Personal</a>
+      <a href="../html/hobbies.html">Aficiones</a>
+      <a href="../html/projects.html">Proyectos</a>
+    </div>
+    <div class="lang">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <nav class="sidebar">
+    <a href="../index.html">Inicio</a>
+    <a href="../html/personal.html">Personal</a>
+    <a href="../html/hobbies.html">Aficiones</a>
+    <a href="../html/projects.html">Proyectos</a>
+  </nav>
+  <section class="content">
+    <nav class="breadcrumb"><a href='../index.html'>Inicio</a> › Personal</nav>
+    <div class='card' data-lang='es'>Contenido personal</div><div class='card' data-lang='en'>Personal content</div>
   <div class="card">
     <h3 data-i18n="personal_presentacion">Presentación</h3>
     <p data-i18n="personal_paragraph">Óscar Pico López, informático y empleado público. Me gusta mi trabajo, pero sobre todo, creo que además de útil, es imprescindible realizar esa labor que sin buscar la obtención de un beneficio, el resultado cuando se hacen las cosas bien es muy gratificante.</p>
@@ -11,4 +47,16 @@
       <li><strong data-i18n="contact_tel_label">Tel:</strong> +34 600 000 000</li>
      </ul>
   </div>
-</section>
+	
+  </section>
+</div>
+<footer>
+  <span>HTML5 · CSS3</span>
+  <span>
+    <a href="https://facebook.com">Facebook</a> |
+    <a href="https://x.com">X</a> |
+    <a href="mailto:correo@ejemplo.com">Email</a>
+  </span>
+</footer>
+</body>
+</html>
