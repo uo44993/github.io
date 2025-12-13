@@ -79,7 +79,13 @@ const i18n = {
   }
 };
 
+
 let currentLang = localStorage.getItem('siteLang') || 'es';
+
+/* ===============================
+   TRADUCCIONES
+================================ */
+const i18n = { /* TU OBJETO i18n NO CAMBIA */ };
 
 function applyTranslations(){
   const dict = i18n[currentLang] || i18n.es;
@@ -102,9 +108,9 @@ function applyTranslations(){
 
 // templates fallback mapping (templates are present in index.html)
 const templates = {
-  './html/personal.html': document.getElementById('tpl-personal').innerHTML,
-  './html/hobbies.html': document.getElementById('tpl-hobbies').innerHTML,
-  './html/projects.html': document.getElementById('tpl-projects').innerHTML
+  'html/personal.html': document.getElementById('tpl-personal').innerHTML,
+  'html/hobbies.html': document.getElementById('tpl-hobbies').innerHTML,
+  'html/projects.html': document.getElementById('tpl-projects').innerHTML
 };
 
 async function loadPage(url){
@@ -121,10 +127,16 @@ async function loadPage(url){
   }
 }
 
-// delegated links so both sidebar and hamburger menu work
+/* ===============================
+   DELEGACIÓN DE EVENTOS (MENÚS)
+================================ */
 document.addEventListener('click', (ev)=>{
-  const a = ev.target.closest('[data-load]');
-  if(a){ ev.preventDefault(); const url = a.getAttribute('data-load'); const normalized = url.startsWith('./') || url.startsWith('/') ? url : './' + url; loadPage(normalized); }
+  const link = ev.target.closest('[data-load]');
+  if (!link) return;
+
+  ev.preventDefault();
+  const url = link.dataset.load;   // ← USAR TAL CUAL
+  loadPage(url);
 });
 
 // language buttons change site-wide language and persist selection
@@ -147,4 +159,4 @@ hambtn.addEventListener('click', ()=>{
 
 // on load, apply translations and load default page
 applyTranslations();
-loadPage('./html/personal.html');
+loadPage('html/personal.html');
