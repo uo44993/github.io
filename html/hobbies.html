@@ -9,8 +9,11 @@
 <body>
 <header>
   <div class="profile">
-    <img src="../profile.jpg">
-    <div><h1>Mi Web Personal</h1><p>Aficiones</p></div>
+    <img src="../images/profile.jpg">
+        <div class="headline">
+          <h1 data-i18n="site_title">Óscar Pico López</h1>
+          <p data-i18n="subtitle">Sigue recorriendo el camino, no te pares</p>
+        </div>    
   </div>
   <div class="top-right">
     <button id="hambtn" class="hambtn">☰</button>
@@ -20,7 +23,7 @@
       <a href="../html/hobbies.html">Aficiones</a>
       <a href="../html/projects.html">Proyectos</a>
     </div>
-    <div class="lang">
+    <div class="lang-btn">
       <button onclick="setLang('es')">ES</button>
       <button onclick="setLang('en')">EN</button>
     </div>
@@ -34,41 +37,68 @@
     <a href="../html/projects.html">Proyectos</a>
   </nav>
   <section class="content">
-    <nav class="breadcrumb"><a href='../index.html'>Inicio</a> › Aficiones</nav>
+    <nav class="breadcrumb" data-lang='es'><a href='../index.html'>Inicio</a> › Aficiones</nav>
+	<nav class="breadcrumb" data-lang='en'><a href='../index.html'>Home</a> › Hobbies</nav>
     <div class='card' data-lang='es'>Aficiones</div><div class='card' data-lang='en'>Hobbies</div>
   <div id="deportes" class="card">
-    <h3 data-i18n="hobby_sports">Deportes</h3>
-    <p data-i18n="hobby_sports_text">Fútbol
-	Bici de montaña
-	Correr (no hago running ni footing, salgo a correr)
-	Montaña
-	Esquí
-	Y además, me encanta ver cualquier evento deportivo tanto en directo commo en televisión.
-	</p>
+    <h3 data-i18="hobby_sports" data-lang='es'>Deportes</h3><h3 data-i18="hobby_sports" data-lang='en'>Sports</h3>
+ 	<ul data-lang='es'>
+      <li><data-i18n="hobby_sports_text">Fútbol</li>
+	  <li><data-i18n="hobby_sports_text">Bici de montaña</li>
+	  <li><data-i18n="hobby_sports_text">Correr (no hago running ni footing, salgo a correr)</li>
+	  <li><data-i18n="hobby_sports_text">Montaña</li>
+      <li><data-i18n="hobby_sports_text">Esquí</li>
+	  <li><data-i18n="hobby_sports_text">Y además, me encanta ver cualquier evento deportivo tanto en directo commo en televisión</li>
+     </ul>
+	 <ul data-lang='en'>
+      <li><data-i18n="hobby_sports_text">Football</li>
+	  <li><data-i18n="hobby_sports_text">Montain bike</li>
+	  <li><data-i18n="hobby_sports_text">Run (not running not footing, go to run)</li>
+	  <li><data-i18n="hobby_sports_text">Montain</li>
+      <li><data-i18n="hobby_sports_text">Ski</li>
+	  <li><data-i18n="hobby_sports_text">And also, I love watching any sporting event, both live and on television</li>
+     </ul>
   </div>
   <div id="musica" class="card">
-    <h3 data-i18n="hobby_music">Música</h3>
-	<ul>
-      <li><strong data-i18n="hobby_music_text">Ac/Dc</li>
-	  <li><strong data-i18n="hobby_music_text">U2</li>
-	  <li><strong data-i18n="hobby_music_text">Foo Fighters</li>
-	  <li><strong data-i18n="hobby_music_text">Nirvana</li>
-      <li><strong data-i18n="hobby_music_text">Arde Bogotá</li>
-	  <li><strong data-i18n="hobby_music_text">Pretty Vicius</li>
-	  <li><strong data-i18n="hobby_music_text">Dead Poet Society</li>
-	  <li><strong data-i18n="hobby_music_text">ROBE, el gran Robe Iniesta</li>
-	  <li><strong data-i18n="hobby_music_text">Pero sobre todo, conciertos en directo, aunque sea un grupo de chavales haciendo versiones y aprendiendo</li>
+    <h3 data-i18n="hobby_music" data-lang='es'>Música</h3><h3 data-i18n="hobby_music" data-lang='en'>Music</h3>
+	<ul data-lang='es'>
+      <li><data-i18n="hobby_music_text">Ac/Dc</li>
+	  <li><data-i18n="hobby_music_text">U2</li>
+	  <li><data-i18n="hobby_music_text">Foo Fighters</li>
+	  <li><data-i18n="hobby_music_text">Nirvana</li>
+      <li><data-i18n="hobby_music_text">Arde Bogotá</li>
+	  <li><data-i18n="hobby_music_text">Pretty Vicius</li>
+	  <li><data-i18n="hobby_music_text">Dead Poet Society</li>
+	  <li><data-i18n="hobby_music_text">ROBE, el gran Robe Iniesta</li>
+	  <li><data-i18n="hobby_music_text">Pero sobre todo, conciertos en directo, aunque sea un grupo de chavales haciendo versiones y aprendiendo</li>
+	 </ul>
+	 <ul data-lang='en'>
+      <li><data-i18n="hobby_music_text">Ac/Dc</li>
+	  <li><data-i18n="hobby_music_text">U2</li>
+	  <li><data-i18n="hobby_music_text">Foo Fighters</li>
+	  <li><data-i18n="hobby_music_text">Nirvana</li>
+      <li><data-i18n="hobby_music_text">Arde Bogotá</li>
+	  <li><data-i18n="hobby_music_text">Pretty Vicius</li>
+	  <li><data-i18n="hobby_music_text">Dead Poet Society</li>
+	  <li><data-i18n="hobby_music_text">ROBE, the great Robe Iniesta</li>
+	  <li><data-i18n="hobby_music_text">But above all, live concerts, even if it's just a group of kids doing covers and learning</li>
      </ul>
   </div>
   <div id="viajes" class="card">
-    <h3 data-i18n="hobby_travel">Viajes</h3>
-    <p data-i18n="hobby_travel_text">Mi último viaje en furgoneta con mis hijos: Alpes, Cinque Terre, Pisa, Florencia, Bolonia, Venecia, Verona y Carcassonne.</p>
-	<p>El verano anterior estuvimos siguiendo las etapas iniciales de la vuelta ciclista a España, tras parar en Hervás, partimos a Plasencia, Alto de Villuercas, Fuente Espina, Sevilla y Jerez de la Frontera, tomamos rumbo Portugal, costa sur, Lisboa, Oporto, y finalmente, una parada por la costa sur de Galicia.</p>
-	</p>
+    <h3 data-i18n="hobby_travel" data-lang='es'>Viajes</h3><h3 data-i18n="hobby_travel" data-lang='en'>Trips</h3>
+ 	<ul data-lang='es'>
+      <li><data-i18n="hobby_travel_text">Mi último viaje en furgoneta con mis hijos: Alpes, Cinque Terre, Pisa, Florencia, Bolonia, Venecia, Verona y Carcassonne.</li>
+	  <li><data-i18n="hobby_travel_text">El verano anterior estuvimos siguiendo las etapas iniciales de la vuelta ciclista a España, tras parar en Hervás, partimos a Plasencia, Alto de Villuercas, Fuente Espina, Sevilla y Jerez de la Frontera, tomamos rumbo Portugal, costa sur, Lisboa, Oporto, y finalmente, una parada por la costa sur de Galicia</li>
+     </ul>
+ 	<ul data-lang='en'>
+	  <li><data-i18n="hobby_travel_text">My last van trip with my children: Alps, Cinque Terre, Pisa, Florence, Bologna, Venice, Verona and Carcassonne.</li>
+	  <li><data-i18n="hobby_travel_text">Last summer we followed the initial stages of the Tour of Spain cycling race. After stopping in Hervás, we headed to Plasencia, Alto de Villuercas, Fuente Espina, Seville and Jerez de la Frontera. Then we went to Portugal, the south coast, Lisbon, Porto, and finally, a stop along the south coast of Galicia.</li> 
+     </ul>
   </div>
   <div id="otros" class="card">
-    <h3 data-i18n="hobby_other">Otros</h3>
-    <p data-i18n="hobby_other_text">De vez en cuanto hacemos escapadas breves para recorrer alguna ruta de unas pocas etapas en bici, ruta del quijote, circular de Extremadura, 10.000 del soplao, ... una manera de hacer deporte, viajar, y sobre todo, compartir experiencias.</p>
+    <h3 data-i18n="hobby_other" data-lang='es'>Otros</h3><h3 data-i18n="hobby_other" data-lang='en'>Others</h3>
+    <p data-i18n="hobby_other_text" data-lang='es'>De vez en cuanto hacemos escapadas breves para recorrer alguna ruta de unas pocas etapas en bici, ruta del quijote, circular de Extremadura, 10.000 del soplao, ... una manera de hacer deporte, viajar, y sobre todo, compartir experiencias.</p>
+	<p data-i18n="hobby_other_text" data-lang='en'>From time to time we take short trips to explore a route of a few stages by bike, the Quixote route, the Extremadura circular route, the 10,000 of Soplao, ... a way to do sport, travel, and above all, share experiences.</p>
   </div>
   </section>
 </div>
@@ -77,7 +107,7 @@
   <span>
     <a href="https://facebook.com">Facebook</a> |
     <a href="https://x.com">X</a> |
-    <a href="mailto:correo@ejemplo.com">Email</a>
+    <a href="mailto:uo44993@uniovi.es">Email</a>
   </span>
 </footer>
 </body>

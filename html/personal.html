@@ -9,8 +9,11 @@
 <body>
 <header>
   <div class="profile">
-    <img src="../profile.jpg">
-    <div><h1>Mi Web Personal</h1><p>Personal</p></div>
+    <img src="../images/profile.jpg">
+        <div class="headline">
+          <h1 data-i18n="site_title">Óscar Pico López</h1>
+          <p data-i18n="subtitle">Sigue recorriendo el camino, no te pares</p>
+        </div>    
   </div>
   <div class="top-right">
     <button id="hambtn" class="hambtn">☰</button>
@@ -20,7 +23,7 @@
       <a href="../html/hobbies.html">Aficiones</a>
       <a href="../html/projects.html">Proyectos</a>
     </div>
-    <div class="lang">
+    <div class="lang-btn">
       <button onclick="setLang('es')">ES</button>
       <button onclick="setLang('en')">EN</button>
     </div>
@@ -34,17 +37,18 @@
     <a href="../html/projects.html">Proyectos</a>
   </nav>
   <section class="content">
-    <nav class="breadcrumb"><a href='../index.html'>Inicio</a> › Personal</nav>
+    <nav class="breadcrumb" data-lang='es'><a href='../index.html'>Inicio</a> › Personal</nav><nav class="breadcrumb" data-lang='en'><a href='../index.html'>Home</a> › Personal</nav>
     <div class='card' data-lang='es'>Contenido personal</div><div class='card' data-lang='en'>Personal content</div>
   <div class="card">
-    <h3 data-i18n="personal_presentacion">Presentación</h3>
-    <p data-i18n="personal_paragraph">Óscar Pico López, informático y empleado público. Me gusta mi trabajo, pero sobre todo, creo que además de útil, es imprescindible realizar esa labor que sin buscar la obtención de un beneficio, el resultado cuando se hacen las cosas bien es muy gratificante.</p>
+    <h3 data-i18n="personal_presentacion" data-lang='es'>Presentación</h3><h3 data-i18n="personal_presentacion" data-lang='en'>Presentation</h3>
+    <p data-i18n="personal_paragraph" data-lang='es'>Óscar Pico López, informático y empleado público. Me gusta mi trabajo, pero sobre todo, creo que además de útil, es imprescindible realizar esa labor que sin buscar la obtención de un beneficio, el resultado cuando se hacen las cosas bien es muy gratificante.</p>
+	<p data-i18n="personal_paragraph" data-lang='en'>Óscar Pico López, computer scientist and public employee. I like my job, but above all, I believe that besides being useful, it's essential to do this work, even without seeking personal gain; the result, when things are done well, is very rewarding.</p>
   </div>
   <div class="card contact">
-    <h3 data-i18n="contact">Contacto</h3>
+    <h3 data-i18n="contact" data-lang='es'>Contacto</h3><h3 data-i18n="contact" data-lang='en'>Contact</h3>
     <ul>
-      <li><strong data-i18n="contact_email_label">Email:</strong> <a href="mailto:uo44993@uniovi.es" data-i18n="contact_email">uo@uniovi.es</a></li>
-      <li><strong data-i18n="contact_tel_label">Tel:</strong> +34 600 000 000</li>
+      <li><data-i18n="contact_email_label">Email:</strong> <a href="mailto:uo44993@uniovi.es" data-i18n="contact_email">uo44993@uniovi.es</a></li>
+      <li><data-i18n="contact_tel_label">Tel:</strong> +34 600 000 000</li>
      </ul>
   </div>
 	
@@ -55,7 +59,7 @@
   <span>
     <a href="https://facebook.com">Facebook</a> |
     <a href="https://x.com">X</a> |
-    <a href="mailto:correo@ejemplo.com">Email</a>
+    <a href="mailto:uo44993@uniovi.es">Email</a>
   </span>
 </footer>
 </body>

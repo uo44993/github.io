@@ -9,8 +9,11 @@
 <body>
 <header>
   <div class="profile">
-    <img src="../profile.jpg">
-    <div><h1>Mi Web Personal</h1><p>Proyectos</p></div>
+    <img src="../images/profile.jpg">
+        <div class="headline">
+          <h1 data-i18n="site_title">Óscar Pico López</h1>
+          <p data-i18n="subtitle">Sigue recorriendo el camino, no te pares</p>
+        </div>    
   </div>
   <div class="top-right">
     <button id="hambtn" class="hambtn">☰</button>
@@ -20,7 +23,7 @@
       <a href="../html/hobbies.html">Aficiones</a>
       <a href="../html/projects.html">Proyectos</a>
     </div>
-    <div class="lang">
+    <div class="lang-btn">
       <button onclick="setLang('es')">ES</button>
       <button onclick="setLang('en')">EN</button>
     </div>
@@ -34,24 +37,37 @@
     <a href="../html/projects.html">Proyectos</a>
   </nav>
   <section class="content">
-    <nav class="breadcrumb"><a href='../index.html'>Inicio</a> › Proyectos</nav>
+    <nav class="breadcrumb" data-lang='es'><a href='../index.html'>Inicio</a> › Proyectos</nav><nav class="breadcrumb" data-lang='en'><a href='../index.html'>Home</a> › Projects</nav>
     <div class='card' data-lang='es'>Proyectos</div><div class='card' data-lang='en'>Projects</div>
-	  <h2 data-i18n="projects_title">Proyectos</h2>
+<!--	  <h2 data-i18n="projects_title">Proyectos</h2> -->
   <div id="lab" class="card">
-    <h3 data-i18n="proj_work">Laboral</h3>
-    <ul id="work-list">
-      <li data-i18n="proj_work_item1">Proyecto EcoDigEDU - Digitalización del sistema educativo del Principado de Asturias de los centros sostenidos con fondos públicos. Mas de 18millones de euros para dispositivos de movilidad para alumnado vulnerable y digitalizaciónn de más de 5.800 con paneles digitales interactivos, puestos docentes y equipamiento específico para aulas técnicas</li>
-      <li data-i18n="proj_work_item2">Proyecto Educa en el Hogar - Dotación de equipamiento para alumnado vulnerable de manera que les garantice el acceso a herramientas de digitalización y conectividad en el hogar, así como dotación de equipamiento en aulas en situación de semipresencialidad.</li>
-    </ul>
+    <h3 data-i18n="proj_work" data-lang='es'>Laboral</h3><h3 data-i18n="proj_work" data-lang='en'>Work</h3>
+    <ul id="work-list" data-lang='es'>
+      <li data-i18n="proj_work_item1" data-lang='es'>Proyecto EcoDigEDU - Digitalización del sistema educativo del Principado de Asturias de los centros sostenidos con fondos públicos. Mas de 18millones de euros para dispositivos de movilidad para alumnado vulnerable y digitalizaciónn de más de 5.800 con paneles digitales interactivos, puestos docentes y equipamiento específico para aulas técnicas</li>
+	  <li data-i18n="proj_work_item2" data-lang='es'>Proyecto Educa en el Hogar - Dotación de equipamiento para alumnado vulnerable de manera que les garantice el acceso a herramientas de digitalización y conectividad en el hogar, así como dotación de equipamiento en aulas en situación de semipresencialidad.</li>
+	 </ul>
+    <ul id="work-list" data-lang='en'>
+	  <li data-i18n="proj_work_item1" data-lang='en'>EcoDigEDU Project - Digitization of the education system of the Principality of Asturias in publicly funded schools. More than 18 million euros for mobile devices for vulnerable students and digitization of more than 5,800 classrooms with interactive digital panels, teaching workstations, and specific equipment for technical classrooms.
+	  <li data-i18n="proj_work_item2" data-lang='en'>Home Education Project - Provision of equipment for vulnerable students to guarantee their access to digitalization and connectivity tools at home, as well as provision of equipment in classrooms in a blended learning situation.</li>
+	 </ul>
+
   </div>
   <div id="personal" class="card">
     <h3 data-i18n="proj_personal">Personal</h3>
-    <ul id="personal-list">
-      <li data-i18n="proj_personal_item1">Proyecto personal 1</li>
-      <li data-i18n="proj_personal_item2">Proyecto personal 2</li>
+    <ul id="personal-list" data-lang='es'>
+      <li data-i18n="proj_personal_item1">Proyectos personales: Desde bien pequeño nunca he sabido o podido estarme quieto, siempre me ha encantado estar acompañado y compartiendo juegos con mis amigos, de manera que no tenía tiempo para leer ni estudiar (no me gustaba).
+	  Con el paso del tiempo, he ido incrementando mi curiosidad por el aprendizaje y han sido numerosas las veces que me he matriculado en la Universidad en los últimos 15 años.
+	  En esta ocasión, el máster en ingeniería web, el cual es todo un reto para mi, ya que todo mi desarrollo profesional y laboral ha estado siempre vinculado al hardware, sistemas y comunicaciones
+	  La vida son retos y desafíos, sino es muy aburrida.</li>
     </ul>
+    <ul id="personal-list" data-lang='en'>
+      <li data-i18n="proj_personal_item1">Personal Projects: From a very young age, I've never been able to sit still. I've always loved being with my friends and playing games, so I didn't have time to read or study (I didn't like it).
+Over time, my curiosity for learning has grown, and I've enrolled in university numerous times in the last 15 years.
+This time, I'm pursuing a master's degree in web engineering, which is quite a challenge for me, since my entire professional and work history has always been linked to hardware, systems, and communications.
+Life is full of challenges; otherwise, it's very boring.</li>
+    </ul>
+	
   </div>
-
   </section>
 </div>
 <footer>
@@ -59,7 +75,7 @@
   <span>
     <a href="https://facebook.com">Facebook</a> |
     <a href="https://x.com">X</a> |
-    <a href="mailto:correo@ejemplo.com">Email</a>
+    <a href="mailto:uo44993@uniovi.es">Email</a>
   </span>
 </footer>
 </body>
