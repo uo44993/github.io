@@ -9,11 +9,11 @@
 <body>
 <header>
   <div class="profile">
-    <img src="profile.jpg">
+    <img src="images/profile.jpg">
         <div class="headline">
           <h1 data-i18n="site_title">Óscar Pico López</h1>
           <p data-i18n="subtitle">Sigue recorriendo el camino, no te pares</p>
-        </div>    <div><h1>Mi Web Personal</h1><p>Inicio</p></div>
+        </div>    
   </div>
   <div class="top-right">
     <button id="hambtn" class="hambtn">☰</button>
@@ -23,7 +23,7 @@
       <a href="html/hobbies.html">Aficiones</a>
       <a href="html/projects.html">Proyectos</a>
     </div>
-    <div class="lang">
+    <div class="lang-btn">
       <button onclick="setLang('es')">ES</button>
       <button onclick="setLang('en')">EN</button>
     </div>
@@ -37,10 +37,10 @@
     <a href="html/projects.html">Proyectos</a>
   </nav>
   <section class="content">
-    <nav class="breadcrumb">Inicio</nav>
+    <nav class="breadcrumb" data-lang='es'>Inicio</nav><nav class='breadcrumb' data-lang='en'>Home</nav>
     <div class='card' data-lang='es'>Bienvenido</div><div class='card' data-lang='en'>Welcome</div>
 	      <div class="card">
-        <p>Esta es mi página Web, en la que podrás conocerme un poco mejor.</p>
+        <p>Esta es mi página Web personal, en la que podrás conocerme un poco mejor.</p>
       </div>
    </section>
 </div>
@@ -49,7 +49,7 @@
   <span>
     <a href="https://facebook.com">Facebook</a> |
     <a href="https://x.com">X</a> |
-    <a href="mailto:correo@ejemplo.com">Email</a>
+    <a href="mailto:uo44993@uniovi.es">Email</a>
   </span>
 </footer>
 </body>
