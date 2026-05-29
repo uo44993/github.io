@@ -21,10 +21,22 @@
   </div>
 
   <div class="top-right">
-    <button id="hambtn" class="hambtn" aria-label="Abrir menú de navegación">☰ Menú</button>
+    
+<button 
+  id="hambtn" 
+  class="hambtn"
+  aria-expanded="false"
+  aria-controls="hambMenu"
+  data-aria-es="Abrir menú de navegación"
+  data-aria-en="Open navigation menu">
+  ☰ 
+  <span data-lang="es">Menú</span>
+  <span data-lang="en">Menu</span>
+</button>
+
 
     
-<div id="hambMenu" class="hamb-menu">
+<div id="hambMenu" class="hamb-menu" hidden>
 
 <a href="index.html" data-lang="es">Inicio</a>
 <a href="index.html" data-lang="en">Home</a>
