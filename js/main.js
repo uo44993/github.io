@@ -1,50 +1,43 @@
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  const btn = document.getElementById("hambtn");
-  const menu = document.getElementById("hambMenu");
- // if(btn && menu){
- //   btn.addEventListener("click", ()=>menu.classList.toggle("show"));
- // }
+document.addEventListener('DOMContentLoaded', () => {
 
- const lang = localStorage.getItem("lang") || "es";
+    // menú hamburguesa
+    const hambtn = document.getElementById('hambtn');
+    const hambMenu = document.getElementById('hambMenu');
 
-  document.documentElement.setAttribute("lang", lang);
+    if(hambtn && hambMenu){
+        hambtn.addEventListener('click', () => {
+            hambMenu.classList.toggle('show');
+        });
+    }
 
-  // Mostrar/ocultar textos por idioma (tu sistema actual)
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    el.style.display = el.dataset.lang === lang ? "inline" : "none";
-  });
+    // idioma guardado
+    const savedLang = localStorage.getItem('lang') || 'es';
 
-  // Traducir aria-label dinámicamente
-  if (btn) {
-    const ariaText = btn.getAttribute(`data-aria-${lang}`);
-    btn.setAttribute("aria-label", ariaText);
-  }
+    changeLanguage(savedLang);
 
-  // Toggle menú accesible
-  if (btn && menu) {
-    btn.addEventListener("click", () => {
-      const isOpen = btn.getAttribute("aria-expanded") === "true";
-
-      btn.setAttribute("aria-expanded", !isOpen);
-
-      if (isOpen) {
-        menu.hidden = true;
-      } else {
-        menu.hidden = false;
-      }
-    });
-  }
 });
 
+function setLang(lang){
 
+    localStorage.setItem('lang', lang);
 
+    changeLanguage(lang);
 
-// document.querySelectorAll("[data-lang]").forEach(el=>{
-//    el.style.display = el.dataset.lang === lang ? "block":"none";
-//  });
-//});
-function setLang(l){
-  localStorage.setItem("lang", l);
-  location.reload();
+}
+
+function changeLanguage(lang){
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-lang]').forEach(el => {
+
+        if(el.dataset.lang === lang){
+            el.style.display = '';
+        }else{
+            el.style.display = 'none';
+        }
+
+    });
+
 }
